@@ -33,6 +33,7 @@ exports.authMapping = {
 	'DELETE - /api/films/([^/])+$' : [],
 	'GET - /api/films/findBycast/([^/])+$' : [],
 	'GET - /api/films/findByfilmMaker/([^/])+$' : [],
+	'GET - /api/films/findBygenre/([^/])+$' : [],
 	'GET - /api/films/([^/])+$' : [],
 	'GET - /api/films/$' : [],
 	'POST - /api/films/prenota$' : [],

@@ -115,6 +115,15 @@ export class FilmBaseService {
             .get(this.contextUrl + '/findByfilmMaker/' + id)
             .map(response => response.json() as Film[]);
     }	
+    
+    /**
+     * Find by genre
+     */
+    findByGenre(id: string): Observable<Film[]> {
+        return this.http
+            .get(this.contextUrl + '/findBygenre/' + id)
+            .map(response => response.json() as Film[]);
+    }	
 	
     /**
      * Get one item by id

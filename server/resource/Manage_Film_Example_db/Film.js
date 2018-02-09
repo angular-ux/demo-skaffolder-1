@@ -100,6 +100,17 @@ app.get(properties.api + '/films/findByfilmMaker/:key', function(req, res){
 	});
 	
 });
+
+//CRUD - FIND BY genre
+	
+app.get(properties.api + '/films/findBygenre/:key', function(req, res){
+
+	db_Manage_Film_Example_db.Film.find({ 'genre' : req.params.key}).exec(function(err, list){
+		if (err) return handleError(err, res);
+		res.send(list);
+	});
+	
+});
 	
 //CRUD - GET ONE
 	
